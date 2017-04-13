@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    /*height: 800px;*/
+    height: 100%;
+    background-color: #e4e4e4;
+}
+.box-row{
+    margin: 0;
+    height: 200%;
+}
+.copyright,.title{
+    /*position: absolute;*/
+    /*bottom:0;*/
+    /*left: 50%;*/
+    /*margin-left: -70px;*/
+    /*font-size: 12px;*/
+    text-align: center;
+}
+.copyright p{
+    margin: 0;
+}
+.title{
+    color: #28a4c9;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.goback{
+    width: 100%;
+    text-align: center;
+}
+.goback-btn{
+    padding: 6px 50px;
+}
+.content{
+    overflow:scroll; width:300px; height:400px;
+}

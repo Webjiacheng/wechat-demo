@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>开始考核</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../common/text.css">
+    <link rel="stylesheet" href="./start-test.css">
+</head>
+<body>
+<div class="container-fluid box">
+    <div class="row box-row" >
+        <div class="set-pro">
+            <div class="header">
+                <p>
+                    <span class='back'>上一步</span>
+                    <span class="kf-img"></span>
+                    <a href="#" class="contact-a"><span class="contact-img"></span><span class="contact">联系客服</span></a>
+                </p>
+            </div>
+            <div class="content">
+                <p class='selected-items'>您选择的项目是：
+                    <div class='items'>
+                        <span>汽车隔音</span><br>
+                        <span>音响设备</span>
+                    </div>
+                </p>
+                <div class='middle'>
+                    <div class='m-header'>
+                        <p>接下来会本别对这以上项目进行简单的考核，考核通过后，即可获得<span class='money'>15</span>元现金奖励！</p>
+                    </div>
+                    <div class='m-middle'></div>
+                    <div class='m-footer'>
+                        <p>每个项目答对2题即可通过，有2次答错机会，每题作答时间为2分钟。考核通过方可开启该项目。</p>
+                    </div>
+                </div>
+                <div class='footer'>
+                    开始考核
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+<script>
+    var h = window.screen.height;
+    if(h>667){
+        $('.footer').css("position",'absolute');
+        $('.footer').css("bottom",0);
+    }
+</script>
+</html>

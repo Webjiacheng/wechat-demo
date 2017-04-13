@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>设置施工项目</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../common/text.css">
+    <link rel="stylesheet" href="./set_project.css">
+</head>
+<body>
+<div class="container-fluid box">
+    <div class="row box-row" >
+        <div class="set-pro">
+            <div class="header">
+                <p>
+                    <span class="warm_prompt">温馨提示：</span>
+                    平台所有项目都默认为上门施工
+                    <span class="kf-img"></span>
+                    <a href="#" class="contact-a"><span class="contact-img"></span><span class="contact">联系客服</span></a>
+                </p>
+            </div>
+            <div class="content">
+                <!--分类1-->
+                <div class="item1">
+                    <div class="item1-left">
+                        <span class="item1-text">音响设备</span>
+                        <span class="item1-arrows"><i class="iconfont arrows-left">&#xe61d;</i></span>
+                    </div>
+                    <div class="item1-right">
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <!--分类2-->
+                <div class="item2">
+                    <div class="item2">
+                        <div class="item2-left">
+                            <span class="item2-text">汽车隔音</span>
+                            <span class="item2-arrows"><i class="iconfont arrows-left">&#xe61d;</i></span>
+                        </div>
+                        <div class="item2-right">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    下一步
+                </div>
+                <!--遮罩层-->
+                <div class="mask">
+                    <span class="clock"><i class="iconfont clock-text">&#xe669;</i></span>
+                    <table class="table table-bordered">
+                        <caption>汽车音响设备</caption>
+                        <thead>
+                        <tr class='theader'>
+                            <th>名称</th>
+                            <th>用时</th>
+                            <th>普通车型</th>
+                            <th>难拆车型</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>车门套装喇叭一对(三分频除外)</td>
+                            <td contentEditable="true">1小时</td>
+                            <td contentEditable="true">100元</td>
+                            <td contentEditable="true">150元</td>
+                        </tr>
+                        <tr>
+                            <td>车门同轴喇叭一对</td>
+                            <td contentEditable="true">1小时</td>
+                            <td contentEditable="true">100元</td>
+                            <td contentEditable="true">150元</td>
+                        </tr>
+                        <tr>
+                            <td>高音喇叭一对</td>
+                            <td contentEditable="true">1小时</td>
+                            <td contentEditable="true">100元</td>
+                            <td contentEditable="true">150元</td>
+                        </tr>
+                        <tr>
+                            <td>低音炮</td>
+                            <td contentEditable="true">1小时</td>
+                            <td contentEditable="true">100元</td>
+                            <td contentEditable="true">150元</td>
+                        </tr>
+                        <tr>
+                            <td>免接线功放</td>
+                            <td contentEditable="true">1小时</td>
+                            <td contentEditable="true">100元</td>
+                            <td contentEditable="true">150元</td>
+                        </tr>
+                        <tr>
+                            <td>接线功放</td>
+                            <td contentEditable="true">1小时</td>
+                            <td contentEditable="true">100元</td>
+                            <td contentEditable="true">150元</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-success save-btn">保存设置</button>
+                </div>
+                <div class='mask-box'>
+                    <div class='status-mask'>
+                        <div class='status-title'>标题</div>
+                        <p class='status-result'>保存成功</p>
+                        <a href="./know_well.html" class='confirm-link'>
+                            <button type="button" class="btn btn-info confirm-btn">确定</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+<script src="../common/countheight.js"></script>
+<script>
+    $(function () {
+//        音像设备
+        $('.item1').on("click",function () {
+            $('.footer').css('display','none');
+            $('.mask').css('display','block');
+        });
+//        汽车隔音
+        $('.item2').on("click",function () {
+            $('.footer').css('display','none');
+            $('.mask').css('display','block');
+        });
+        $('.clock').on("click",function () {
+            $('.mask').css('display','none');
+        });
+        $('.save-btn').on('click',function () {
+            $('.mask-box').css('display','block');
+        })
+//        点击遮罩层关闭
+//        $('.mask-box').on('click',function () {
+//            $('.mask-box').css('display','none');
+//        })
+        $('.confirm-btn').on('click',function () {
+            $('.mask-box').css('display','none');
+            $('.mask').css('display','none');
+            $('.footer').css('display','block');
+        })
+    })
+</script>
+</html>
