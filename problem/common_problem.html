@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>常见问题</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../common/text.css">
+    <link rel="stylesheet" href="./common_problem.css">
+</head>
+<body>
+<div class="container-fluid box">
+    <div class="row box-row" >
+        <div class="common_problem">
+            <!--下拉框-->
+            <div class='news-items'>
+                <ul class='ul-title-p'>
+                    <li class="dropdown">
+                        <!--<a href="#">第一行</a>-->
+                        <span class='li-time'>1</span><span class='li-title'>关于每月平台使用费</span><span class='li-slie'>展开</span>
+                        <div class='content hidec'>
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class='li-time'>1</span><span class='li-title'>关于施工后到账</span><span class='li-slie'>展开</span>
+                        <div class='content hidec'>
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class='li-time'>1</span><span class='li-title'>关于提现</span><span class='li-slie'>展开</span>
+                        <div class='content hidec'>
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class='li-time'>1</span><span class='li-title'>关于项目设置</span><span class='li-slie'>展开</span>
+                        <div class='content hidec'>
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            重要的事情重复三遍！
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!--脚部-->
+            <div class='footer'>
+                <div class='set col-xs-4'><a href="javascript:;">设置</a></div>
+                <div class='order col-xs-4'><a href="javascript:;">订单</a></div>
+                <div class='me col-xs-4'><a href="javascript:;">我</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+<script>
+    var Height=window.screen.height;
+    var totalHeight=$('body').height();
+    $('.dropdown').on('click',function () {
+        if($(this).find('div')[0].className.split(' ')[1]==='showc'){
+            totalHeight-=$(this).find('div').height();//求出展开后的高度
+            console.log(totalHeight);
+            if(totalHeight<Height){
+                console.log('该固定了');
+                $('.footer').css('position','absolute');
+            }
+            $(this).find('div').slideUp().removeClass().addClass("content hidec");
+            $(this).find('.li-slie')[0].innerText='展开';
+        }else {
+            totalHeight+=$(this).find('div').height();//求出展开后的高度
+            console.log(totalHeight);
+            if(totalHeight>Height){
+                console.log('该浮起来了');
+                $('.footer').css('position','relative');
+            }
+            $(this).find('div').slideDown().removeClass().addClass("content showc");
+            $(this).find('.li-slie')[0].innerText='收起';
+        }
+    })
+</script>
+</html>

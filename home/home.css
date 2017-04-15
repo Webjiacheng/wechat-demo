@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    padding: 0;
+    height: 100%;
+    text-align: center;
+}
+.box-row{
+    margin: 0;
+    height: 100%;
+}
+.home{
+    width: 100%;
+    /*height: 800px;*/
+    /*background-color: #2aabd2;*/
+}
+.home-title{
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    margin-top: 130px;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    line-height: 60px;
+}
+.name{
+    position: absolute;
+    left: 8px;
+}
+.show{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.home-money{
+    height: 150px;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+.money{
+    font-size: 60px;
+    color: #000;
+    font-weight: bold;
+}
+.tool{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #d2415e;
+    left: 5px;
+    bottom: 20px;
+    background: url("../img/8.jpg") no-repeat;
+    background-size: cover;
+    padding-top: 60px;
+    font-weight: bold;
+}
+.news{
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    /*margin-bottom: 10px;*/
+}
+/*下拉框头部*/
+.dropdown{
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+}
+.li-time,.li-title,.li-slie{
+    line-height: 40px;
+    display: inline-block;
+}
+.li-title{
+    margin: 0 66px;
+}
+.content{
+    /*background-color: #2b542c;*/
+    border-top: 1px dashed #666;
+    display: none;
+    height: 90px;
+}
+/*下拉框结束*/
+
+/*脚部开始*/
+.footer{
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+}
+.set,.order,.me{
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 0;
+     padding-left: 0;
+}
+.set a,.order a,.me a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+/*脚部结束*/
+.kf-img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #2aabd2;
+    background: url("../img/9.png") no-repeat;
+    background-size: contain;
+    right: 10px;
+    bottom: 24px;
+    padding-top: 60px;
+    text-align: center;
+}
+.img{
+    width: 100%;
+    height: 100px;
+    background-color: #ccc;
+    position: relative;
+}
+.show{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    /*background-color: #2aabd2;*/
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+}
+.menu{
+    width: 150px;
+    height: 160px;
+    background-color: #000;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+.menu li{
+    width: 100%;
+    height: 40px;
+    /*background-color: yellow;*/
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #fff;
+    color: #fff;
+}
+

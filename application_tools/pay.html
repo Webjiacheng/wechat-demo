@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>申请工具支付</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../common/text.css">
+    <link rel="stylesheet" href="./pay.css">
+    <link href="../lib/area/css/select2.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-fluid box">
+    <div class="row box-row" >
+        <div class="pay">
+            <div class='title'>
+                <span class='back'>返回</span>
+                <span class='kf-img'></span>
+                <span class='kf-text'>联系客服</span>
+            </div>
+            <div class='wx-pay'>
+                <p>微信支付</p>
+                <div class='check'>
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div class='balance-pay'>
+                <p>余额支付（<span>¥560</span>元）</p>
+                <div class='check'>
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div class='info'>
+                <p class='name'>
+                    <span>收货人</span>
+                    <input type="text" placeholder='收货人姓名'>
+                </p>
+                <p class='tel'>
+                    <span>联系电话</span>
+                    <input type="text" placeholder='收货人电话'>
+                </p>
+                <p class='area'>
+                    <span class='area_text'>所在地区</span>
+                    <input type="text">
+                    <!--<span class='select'>请选择</span>-->
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </p>
+                <p class='detailed_address'>
+                    <span>详细地址</span>
+                    <input type="text" placeholder='详细快递地址'>
+                </p>
+            </div>
+            <div class='promt'>
+                <p>申请工具后，有马会在次日发货，请注意查收快递。</p>
+            </div>
+            <div class='footer'>
+                <p>支付<span>200元</span></p>
+            </div>
+        </div>
+        <div class='area-show'>
+            <select id="loc_province" style="width:100px;">
+            </select>
+            <select id="loc_city" style="width:100px;">
+            </select>
+            <select id="loc_town" style="width:100px;">
+            </select>
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="button" id="btnval" value="返回" style="padding:5px 15px;"/>
+            <input type="button" id="btntext" value="获取文本" style="padding:5px 15px;" />
+        </div>
+    </div>
+</div>
+</body>
+<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+<script src='../common/countheight.js'></script>
+<script type="text/javascript" src="../lib/area/js/area.js"></script>
+<script type="text/javascript" src="../lib/area/js/location.js"></script>
+<script src="../lib/area/js/select2.js"></script>
+<script src="../lib/area/js/select2_locale_zh-CN.js"></script>
+<script>
+    $('.check').on('click',function () {
+        if($(this).find('span').css('display')==='none'){
+            $(this).find('span').css('display','block');
+        }else {
+            $(this).find('span').css('display','none');
+        }
+    })
+    $('.area').on('click',function () {
+        $('.area-show').css('display','block');
+    })
+</script>
+</html>

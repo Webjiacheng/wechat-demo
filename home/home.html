@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>我</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../common/text.css">
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+<div class="container-fluid box">
+    <div class="row box-row" >
+        <div class="home">
+            <div class='home-title'>
+                <span class='name'>吴彦祖&nbsp;您好</span>
+                <span class='wallet'>钱包</span>
+                <span class='show'>...</span>
+            </div>
+            <div class='home-money'>
+                <p class='money'>¥15元</p>
+                <p>领红包请添加客服微信：youmacz</p>
+                <span class='tool'>
+                    申请工具
+                </span>
+                <div class='menu'>
+                    <ul>
+                        <li>查看明细</li>
+                        <li>提现</li>
+                        <li>常见问题</li>
+                        <li>退出登录</li>
+                    </ul>
+                </div>
+            </div>
+            <div class='news'>
+                最新公告
+            </div>
+            <div class='news-items'>
+                <ul class='ul-title-p'>
+                    <li class="dropdown">
+                        <!--<a href="#">第一行</a>-->
+                        <span class='li-time'>2017.02.14</span><span class='li-title'>情人节快乐</span><span class='li-slie'>展开</span>
+                        <div class='content hidec'>
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            重要的事情重复三遍！
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class='li-time'>2017.02.14</span><span class='li-title'>情人节快乐</span><span class='li-slie'>展开</span>
+                        <div class='content hidec'>
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            重要的事情重复三遍！
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class='li-time'>2017.02.14</span><span class='li-title'>情人节快乐</span><span class='li-slie'>展开</span>
+                        <div class='content hidec'>
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                            重要的事情重复三遍！
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class='img'>
+                <span class='kf-img'>联系客服</span>
+            </div>
+            <div class='footer'>
+                <div class='set col-xs-4'><a href="javascript:;">设置</a></div>
+                <div class='order col-xs-4'><a href="javascript:;">订单</a></div>
+                <div class='me col-xs-4'><a href="javascript:;">我</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+<script>
+    $('.dropdown').on('click',function () {
+        if($(this).find('div')[0].className.split(' ')[1]==='showc'){
+            $(this).find('div').slideUp().removeClass().addClass("content hidec");
+            $(this).find('.li-slie')[0].innerText='展开';
+        }else {
+            $(this).find('div').slideDown().removeClass().addClass("content showc");
+            $(this).find('.li-slie')[0].innerText='收起';
+        }
+    })
+    var num=1;
+    $('.show').on('click',function () {
+        if(num%2!=0){
+            $('.menu').stop().slideDown();
+        }else {
+            $('.menu').stop().slideUp();
+        }
+        num++;
+    })
+</script>
+</html>

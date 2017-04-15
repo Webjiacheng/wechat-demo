@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../common/text.css">
+    <link rel="stylesheet" href="./order_details.css">
+</head>
+<body>
+<div class="container-fluid box">
+    <div class="row box-row" >
+        <div class="order_details">
+            <div class='title'>
+                <div class='title-l'>进行中</div>
+                <div class='title-r'>已完成</div>
+            </div>
+            <div class='status'>
+                <p class='status-p'>待施工</p>
+                <div class='apply'>申请售后</div>
+            </div>
+            <table class="table table-striped">
+                <tr class=""><td>车主</td><td>苍井空 小姐（宝马 Q3）</td></tr>
+                <tr class=""><td>时间</td><td>2017年 3月1日  15:30 到达</td></tr>
+                <tr class=""><td>地址</td><td>广东省广州市海珠区江南大道中华海酒店410房</td></tr>
+                <tr class=""><td>施工费</td><td>220 元（含交通费10元）</td></tr>
+                <tr class=""><td>施工项目1</td><td>隔音：底盘隔音</td></tr>
+                <tr class=""><td>施工项目2</td><td>隔音：4门隔音</td></tr>
+                <tr class=""><td>备注</td><td>要皮肤黑的，年龄25-35，身高170-180cm，会踢足球，广州人，狮子座</td></tr>
+            </table>
+            <!--进行中就要显示，已完成就要隐藏-->
+            <div class='contact'>
+                <div class='contact-l'>
+                    <span class='kf-img'></span>
+                    <span>联系客服</span>
+                </div>
+                <div class='contact-r'>
+                    <span class='tel-img'></span>
+                    <span>联系车主</span>
+                </div>
+            </div>
+            <!--已完成就显示，进行中就隐藏-->
+            <div class='service'>
+                <p class='service-p'>车主无需服务</p>
+            </div>
+            <table class="table table-striped complete">
+                <tr class=""><td>车主</td><td>苍井空 小姐（宝马 Q3）</td></tr>
+                <tr class=""><td>时间</td><td>2017年 3月1日  15:30 到达</td></tr>
+                <tr class=""><td>地址</td><td>广东省广州市海珠区江南大道中华海酒店410房</td></tr>
+            </table>
+
+            <div class='footer'>
+                <div class='set col-xs-4'><a href="javascript:;">设置</a></div>
+                <div class='order col-xs-4'><a href="javascript:;">订单</a></div>
+                <div class='me col-xs-4'><a href="javascript:;">我</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+<script>
+    $('.title-l').on('click',function () {
+        $('.complete').css('display','none');
+        $('.service').css('display','none');
+        $('.contact').css('display','block');
+    });
+    $('.title-r').on('click',function () {
+        console.log('右');
+        $('.complete').css('display','block');
+        $('.service').css('display','block');
+        $('.contact').css('display','none');
+    });
+</script>
+</html>

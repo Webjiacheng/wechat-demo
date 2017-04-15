@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    padding: 0;
+    height: 100%;
+}
+.box-row{
+    margin: 0;
+    height: 100%;
+}
+body{
+    background-color: #ccc;
+}
+.title{
+    margin-top: 130px;
+    padding: 10px;
+}
+.back{
+    display: block;
+    /*background-color: #0f0f0f;*/
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*中间头*/
+
+.prompt{
+    text-align: center;
+    font-weight: bold;
+}
+.res{
+    text-align: center;
+}
+.yzm{
+    text-align: center;
+}
+.yzm input{
+    width: 100px;
+}
+p{
+    margin-bottom: 30px;
+}
+
+
+/*中间尾*/
+
+.footer{
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    line-height: 60px;
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+.footer p{
+    margin-bottom: 0;
+}

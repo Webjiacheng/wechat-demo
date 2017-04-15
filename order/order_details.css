@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    padding: 0;
+    height: 100%;
+    text-align: center;
+}
+.box-row{
+    margin: 0;
+    height: 100%;
+}
+.title{
+    width: 100%;
+    height: 40px;
+    background-color: #1b6d85;
+    margin-top: 130px;
+}
+.title-l,.title-r{
+    width: 50%;
+    height: 100%;
+    float: left;
+    color: #000;
+    background-color: #ccc;
+    border: 1px solid #666;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.status{
+    width: 100%;
+    height: 30px;
+    background-color: #000;
+    position: relative;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+.service{
+    width: 100%;
+    height: 30px;
+    background-color: #000;
+    position: relative;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    display: none;
+}
+.apply{
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 80px;
+    height: 26px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
+tr td:first-of-type{
+    border-right: 1px solid #ccc;
+}
+.table{
+    margin-bottom: 0;
+}
+
+/*隐藏*/
+.complete,.service{
+    display: none;
+}
+
+.contact{
+    width: 100%;
+    height: 60px;
+    /*background-color: #2b542c;*/
+    /*margin-bottom: 500px;*/
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.contact-l,.contact-r{
+    width: 60px;
+    height: 60px;
+    /*background-color: #1b6d85;*/
+    display: inline-block;
+}
+.contact-l{
+    margin-right: 20px;
+}
+.contact-r{
+    margin-left: 20px;
+}
+.kf-img,.tel-img{
+    width: 40px;
+    height: 40px;
+    background-color: #0f0f0f;
+    display: block;
+    margin-left: 10px;
+}
+.kf-img{
+    background: url("../img/9.png") no-repeat;
+    background-size: cover;
+}
+.tel-img{
+    background: url("../img/3.png") no-repeat;
+    background-size: cover;
+}
+/*三级菜单开始*/
+.footer{
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+}
+.set,.order,.me{
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 0;
+    padding-left: 0;
+}
+.set a,.order a,.me a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+/*三级菜单结束*/

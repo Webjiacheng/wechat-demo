@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>切换显示</title>
+    <link rel="stylesheet" href="./slide.css">
+</head>
+<body>
+<div class='news-items'>
+    <ul class='ul-title-p'>
+        <li class="dropdown">
+            <a href="#">第一行</a>
+            <div class='content hidec'>
+                春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                重要的事情重复三遍！
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">第一行</a>
+            <div class='content hidec'>
+                春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                重要的事情重复三遍！
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">第一行</a>
+            <div class='content hidec'>
+                春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                春节期间，有马车装不休息，地球一天不爆炸，有马一天不息！！
+                重要的事情重复三遍！
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+<script src="../lib/jQuery/jquery-3.2.1.min.js"></script>
+<script>
+    $('.dropdown').on('click',function () {
+        console.log($(this).find('div')[0].className.split(' ')[1]);
+
+        if($(this).find('div')[0].className.split(' ')[1]==='showc'){
+            $(this).find('div').slideUp().removeClass().addClass("content hidec");
+            $(this).siblings().find('div').slideDown();
+        }else {
+            $(this).find('div').slideDown().removeClass().addClass("content showc");
+            $(this).siblings().find('div').slideUp();
+        }
+    })
+</script>
+</html>
